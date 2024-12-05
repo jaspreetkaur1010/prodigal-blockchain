@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-light {
+    font-weight: 300;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .custom-arrow {
+    display: inline-block;
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+    padding-left: 8px;
+}
+
+/* Reveal arrow on hover */
+.group:hover .custom-arrow {
+    opacity: 1;
+    transform: translateX(0); /* Reset position */
+}
+
+.tabs{
+  background-color: greenyellow;
+
+}
+
+.active-tabs{
+  max-height: fit-content;
+}
+
+.content{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.content.show{
+  height:max-content;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+
+.icon{
+  transition: transform 300ms;
+}
+
+.rotate-icon{
+  transform: rotate(135deg);
+}
